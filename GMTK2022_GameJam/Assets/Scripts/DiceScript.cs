@@ -8,7 +8,7 @@ public class DiceScript : MonoBehaviour
 {
     private static Rigidbody rb;
     public static Vector3 diceVelocity;
-    public static int diceNum;
+    public int diceNum;
 
     private void Start()
     {
