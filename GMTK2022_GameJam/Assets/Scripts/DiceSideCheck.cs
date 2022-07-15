@@ -10,7 +10,7 @@ public class DiceSideCheck : MonoBehaviour
 
     private void Start()
     {
-        DiceScript.diceNum = diceNumber;
+        
     }
 
     private void FixedUpdate()
