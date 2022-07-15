@@ -10,7 +10,7 @@ public class DiceSideCheck : MonoBehaviour
 
     private void Start()
     {
-        DiceScript.diceNum = diceNumber;
+        DiceNumberText.diceNumber = diceNumber;
     }
 
     private void FixedUpdate()
@@ -24,24 +24,24 @@ public class DiceSideCheck : MonoBehaviour
         {
             switch (col.gameObject.name)
             {
-                case "Side1":
-                    DiceScript.diceNum = 6;
-                    break;
-                case "Side2":
-                    DiceScript.diceNum = 5;
-                    break;
-                case "Side3":
-                    DiceScript.diceNum = 4;
-                    break;
-                case "Side4":
-                    DiceScript.diceNum = 3;
-                    break;
-                case "Side5":
-                    DiceScript.diceNum = 2;
-                    break;
-                case "Side6":
-                    DiceScript.diceNum = 1;
-                    break;
+                    case "Side1":
+                        DiceNumberText.diceNumber = 3;
+                        break;
+                    case "Side2":
+                        DiceNumberText.diceNumber = 4;
+                        break;
+                    case "Side3":
+                        DiceNumberText.diceNumber = 1;
+                        break;
+                    case "Side4":
+                        DiceNumberText.diceNumber = 2;
+                        break;
+                    case "Side5":
+                        DiceNumberText.diceNumber = 6;
+                        break;
+                    case "Side6":
+                        DiceNumberText.diceNumber = 5;
+                        break;
             }
         }
     }
