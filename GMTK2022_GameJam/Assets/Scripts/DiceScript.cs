@@ -1,18 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DiceScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static Rigidbody rb;
+    public static Vector3 diceVelocity;
+    public int diceNum;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody>(); //Get RB
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        diceVelocity = rb.velocity;
         
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            diceNum = 0;
+            //Random rotation of Dice
+            float dirX = Random.Range(0, 500);
+            float dirY = Random.Range(0, 500);
+            float dirZ = Random.Range(0, 500);
+
+            transform.position = new Vector3(0, 10, 0);
+            transform.rotation = Quaternion.identity;
+            
+            rb.AddForce(transform.up * -500); //Drop Dice
+            rb.AddTorque(dirX, dirY, dirZ);
+        }
     }
 }
