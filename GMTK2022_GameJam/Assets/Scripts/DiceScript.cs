@@ -8,7 +8,7 @@ public class DiceScript : MonoBehaviour
 {
     private static Rigidbody rb;
     public static Vector3 diceVelocity;
-    public int diceNum;
+    public static int diceNum;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class DiceScript : MonoBehaviour
     {
         diceVelocity = rb.velocity;
         
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.R)) //Check for R Button Click
         {
             diceNum = 0;
             //Random rotation of Dice
@@ -30,8 +30,9 @@ public class DiceScript : MonoBehaviour
             transform.position = new Vector3(0, 10, 0);
             transform.rotation = Quaternion.identity;
             
-            rb.AddForce(transform.up * -500); //Drop Dice
+            rb.AddForce(transform.up * -200); //Drop Dice
             rb.AddTorque(dirX, dirY, dirZ);
         }
+        
     }
 }
