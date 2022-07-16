@@ -41,7 +41,7 @@ public class EnemyScript : MonoBehaviour
         {
             Vector3 nextPos = currentRoute.childNodeList[routePosition + 1].position;
 
-            while(MoveToNextNote(nextPos))
+            while(MoveToNextNode(nextPos))
             {
                 yield return null;
             }
@@ -54,8 +54,8 @@ public class EnemyScript : MonoBehaviour
         EnemyisMoving = false;
     }
 
-    private bool MoveToNextNote(Vector3 goal)
+    private bool MoveToNextNode(Vector3 goal)
     {
-        return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f * Time.deltaTime));
+        return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 4f * Time.deltaTime));
     }
 }
