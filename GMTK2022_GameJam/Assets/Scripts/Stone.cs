@@ -6,7 +6,7 @@ public class Stone : MonoBehaviour
 {
     public Route currentRoute;
 
-    private int routePosition;
+    public int routePosition;
 
     public int steps;
 
