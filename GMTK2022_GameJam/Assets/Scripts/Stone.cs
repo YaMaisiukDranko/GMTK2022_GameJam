@@ -1,17 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Stone : MonoBehaviour
 {
+    public event EventHandler OnPlayerStandOnFinalRoute;
     public Route currentRoute;
 
     public int routePosition;
 
-    public int steps;
+    public int steps; 
 
     private bool isMoving;
+    private void Start()
+    {
+        this.OnPlayerStandOnFinalRoute += Stone_OnPlayerStandOnFinalRoute;
+    }
 
+    private void Stone_OnPlayerStandOnFinalRoute(object sender, EventArgs e)
+    {
+        GameOverUI.Instance.Show();
+        Debug.Log("Game Over!");
+    }
 
     private void Update()
     {
@@ -27,6 +38,7 @@ public class Stone : MonoBehaviour
                 }
             }
         }
+        
     }
 
     public IEnumerator Move()
@@ -40,6 +52,11 @@ public class Stone : MonoBehaviour
         while(steps > 0)
         {
             Vector3 nextPos = currentRoute.childNodeList[routePosition + 1].position;
+            int gameOverValue = 4;
+            if (nextPos == currentRoute.childNodeList[gameOverValue].position)
+            {
+                OnPlayerStandOnFinalRoute?.Invoke(this, EventArgs.Empty);
+            }
 
             while(MoveToNextNote(nextPos))
             {
@@ -56,6 +73,6 @@ public class Stone : MonoBehaviour
 
     private bool MoveToNextNote(Vector3 goal)
     {
-        return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 2f * Time.deltaTime));
+        return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 4f * Time.deltaTime));
     }
 }

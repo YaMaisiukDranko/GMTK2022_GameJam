@@ -36,16 +36,5 @@ public class Route : MonoBehaviour
                 childNodeList.Add(child);
             }
         }
-
-        //for (int i = 0; i < nodeAmount; i++)
-        //{
-        //    if (nodeTransform != transform)
-        //    {
-        //        offsetAmount += 2f;
-        //        Transform childNode = Instantiate(nodeTransform, new Vector3(
-        //            nodeTransform.position.x, nodeTransform.position.y, nodeTransform.position.z + offsetAmount), Quaternion.identity);
-        //        childNodeList.Add(childNode);
-        //    }
-        //}
     }
 }
