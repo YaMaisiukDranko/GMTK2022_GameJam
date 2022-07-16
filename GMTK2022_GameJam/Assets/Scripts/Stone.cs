@@ -17,14 +17,18 @@ public class Stone : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
-            steps = Random.Range(1, 7);
-
-            if(routePosition + steps < currentRoute.childNodeList.Count)
+            Debug.Log("FigureMoving");
+            if(!isMoving)
             {
-                StartCoroutine(Move());
+                steps = DiceNumberText.diceNumber;
+                if(routePosition + steps < currentRoute.childNodeList.Count)
+                {
+                    StartCoroutine(Move());
+                }
             }
         }
     }
+
     private IEnumerator Move()
     {
         if(isMoving)

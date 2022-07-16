@@ -9,10 +9,12 @@ public class DiceScript : MonoBehaviour
     private static Rigidbody rb;
     public static Vector3 diceVelocity;
     public int diceNum;
+    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>(); //Get RB
+       
     }
 
     private void Update()
@@ -32,6 +34,7 @@ public class DiceScript : MonoBehaviour
             
             rb.AddForce(transform.up * -200); //Drop Dice
             rb.AddTorque(dirX, dirY, dirZ);
+            
         }
         
     }

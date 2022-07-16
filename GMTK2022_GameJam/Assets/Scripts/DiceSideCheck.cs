@@ -7,10 +7,12 @@ public class DiceSideCheck : MonoBehaviour
 {
     private Vector3 diceVelocity;
     public int diceNumber;
+    private Stone _stone;
 
     private void Start()
     {
         DiceNumberText.diceNumber = diceNumber;
+        _stone = GameObject.FindWithTag("Player").GetComponent<Stone>();
     }
 
     private void FixedUpdate()
@@ -43,6 +45,13 @@ public class DiceSideCheck : MonoBehaviour
                         DiceNumberText.diceNumber = 5;
                         break;
             }
+
+            //Call figure moving
+            if (DiceNumberText.diceNumber != 0)
+            {
+                //_stone.FigureMoving();
+            }
+            
         }
     }
 }
