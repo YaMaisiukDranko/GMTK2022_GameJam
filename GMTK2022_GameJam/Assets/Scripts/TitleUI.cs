@@ -10,7 +10,7 @@ public class TitleUI : MonoBehaviour
     {
         transform.Find("startBtn").GetComponent<Button>().onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         });
     }
 }
