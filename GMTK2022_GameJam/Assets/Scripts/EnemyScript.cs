@@ -10,15 +10,15 @@ public class EnemyScript : MonoBehaviour
 
     public int steps;
 
-    private bool isMoving;
+    private bool EnemyisMoving;
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.Space) && !EnemyisMoving)
         {
             Debug.Log("FigureMoving");
-            if(!isMoving)
+            if(!EnemyisMoving)
             {
                 steps = DiceNumberText.diceNumber;
                 if(routePosition + steps < currentRoute.childNodeList.Count)
@@ -31,11 +31,11 @@ public class EnemyScript : MonoBehaviour
 
     private IEnumerator Move()
     {
-        if(isMoving)
+        if(EnemyisMoving)
         {
             yield break;
         }
-        isMoving = true;
+        EnemyisMoving = true;
 
         while(steps > 0)
         {
@@ -51,7 +51,7 @@ public class EnemyScript : MonoBehaviour
             routePosition++;
         }
 
-        isMoving = false;
+        EnemyisMoving = false;
     }
 
     private bool MoveToNextNote(Vector3 goal)

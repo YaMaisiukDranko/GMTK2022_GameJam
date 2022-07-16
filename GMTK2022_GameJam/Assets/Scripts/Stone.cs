@@ -29,7 +29,7 @@ public class Stone : MonoBehaviour
         }
     }
 
-    private IEnumerator Move()
+    public IEnumerator Move()
     {
         if(isMoving)
         {
