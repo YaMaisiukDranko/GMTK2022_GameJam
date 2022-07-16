@@ -31,7 +31,7 @@ public class Route : MonoBehaviour
 
         foreach(Transform child in childObjects)
         {
-            if(child != transform)
+            if(child != transform && child.name != "platform_v2") //Check Childs
             {
                 childNodeList.Add(child);
             }
