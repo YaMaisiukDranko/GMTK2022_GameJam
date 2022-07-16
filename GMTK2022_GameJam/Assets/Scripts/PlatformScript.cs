@@ -6,10 +6,14 @@ using UnityEngine;
 public class PlatformScript : MonoBehaviour
 {
     public Collider trigger;
+    private MemeScript _memeScript;
+    public GameObject memeManager;
 
     private void Start()
     {
         trigger = GetComponentInChildren<Collider>();
+        memeManager = GameObject.FindWithTag("MemeManager");
+        _memeScript = memeManager.GetComponent<MemeScript>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -17,6 +21,7 @@ public class PlatformScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("touch " + name);
+            _memeScript.MemeShow();
         }
     }
 }

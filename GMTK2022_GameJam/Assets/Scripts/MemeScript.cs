@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class MemeScript : MonoBehaviour
 {
-    public GameObject[] platforms;
-
-    private void Start()
+    public void MemeShow()
     {
-        
+        Debug.Log("MemeShow");
     }
 }
