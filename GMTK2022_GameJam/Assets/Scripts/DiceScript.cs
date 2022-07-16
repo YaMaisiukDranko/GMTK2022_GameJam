@@ -23,19 +23,23 @@ public class DiceScript : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.R)) //Check for R Button Click
         {
-            diceNum = 0;
-            //Random rotation of Dice
-            float dirX = Random.Range(0, 500);
-            float dirY = Random.Range(0, 500);
-            float dirZ = Random.Range(0, 500);
-
-            transform.position = new Vector3(0, 10, 0);
-            transform.rotation = Quaternion.identity;
-            
-            rb.AddForce(transform.up * -200); //Drop Dice
-            rb.AddTorque(dirX, dirY, dirZ);
-            
+            DropDice();
         }
         
+    }
+
+    void DropDice()
+    {
+        diceNum = 0;
+        //Random rotation of Dice
+        float dirX = Random.Range(0, 500);
+        float dirY = Random.Range(0, 500);
+        float dirZ = Random.Range(0, 500);
+
+        transform.position = new Vector3(0, 10, 0);
+        transform.rotation = Quaternion.identity;
+            
+        rb.AddForce(transform.up * -200); //Drop Dice
+        rb.AddTorque(dirX, dirY, dirZ);
     }
 }
