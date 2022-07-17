@@ -1289,7 +1289,7 @@ GameObject:
   - component: {fileID: 326534906}
   - component: {fileID: 326534905}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2379,7 +2379,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 721933740}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 669462702}
+        m_TargetAssemblyTypeName: MemeManager, Assembly-CSharp
+        m_MethodName: OnClickYes
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &721933740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3355,7 +3367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1032973806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5051,7 +5063,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1629559623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 669462702}
+        m_TargetAssemblyTypeName: MemeManager, Assembly-CSharp
+        m_MethodName: OnClickNo
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1629559623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5950,7 +5974,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1846657619
 Transform:
   m_ObjectHideFlags: 0
@@ -7074,9 +7098,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3621245141173243264}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.2664933, y: -0.20676003, z: 0.28617078, w: 0.896849}
   m_LocalPosition: {x: -2.7, y: 27.4, z: 4.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1089276946}
@@ -7087,7 +7111,7 @@ Transform:
   - {fileID: 1639689182}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.08, y: -34.12, z: 41.93}
 --- !u!114 &4110361396461295419
 MonoBehaviour:
   m_ObjectHideFlags: 0

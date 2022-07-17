@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !EnemyisMoving)
         {
-            Debug.Log("FigureMoving");
+            Debug.Log("EnemyMoving");
             if(!EnemyisMoving)
             {
                 steps = DiceNumberText.diceNumber;

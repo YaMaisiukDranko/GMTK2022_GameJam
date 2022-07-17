@@ -43,7 +43,7 @@ public class DiceScript : MonoBehaviour
         float dirY = Random.Range(0, 500);
         float dirZ = Random.Range(0, 500);
 
-        transform.position = new Vector3(0, 10, 0);
+        transform.position = new Vector3(-2.7f, 27.4f, 4.7f);
         transform.rotation = Quaternion.identity;
             
         rb.AddForce(transform.up * -200); //Drop Dice

@@ -24,17 +24,22 @@ public class MemeManager : MonoBehaviour
     {
         if (currentStep >= 1)
         {
-            if (isMoving == true)
+            if (isMoving == true && DiceNumberText.diceNumber > 1)
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(1f);
                 SecondCamera.SetActive(false);
                 MainCamera.SetActive(true);
             }
-            else if(isMoving == false)
+            else if(isMoving == false && DiceNumberText.diceNumber > 1)
             {
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(2f);
                 SecondCamera.SetActive(true);
                 MainCamera.SetActive(false);
+            }
+            else if(DiceNumberText.diceNumber == 1)
+            {
+                SecondCamera.SetActive(false);
+                MainCamera.SetActive(true);
             }
         }
         else
@@ -45,6 +50,7 @@ public class MemeManager : MonoBehaviour
 
     private void Start()
     {
+        currentStep = Stone.routePosition;
         currentSprite = sr.sprite;
         currentStep = spriteInt;
         isMoving = Stone.isMoving;
@@ -74,9 +80,44 @@ public class MemeManager : MonoBehaviour
 
     
     //QUESTIONS
-    void Questions(int kickProbability)
+    void Questions()
     {
-        kickProbability = Random.Range(1, 4);
+        
+       
     }
+
+    public void OnClickYes(int kickProbability)
+    {
+        MainCamera.SetActive(true);
+        SecondCamera.SetActive(false);
+        
+        kickProbability = Random.Range(1, 6);
+        if (kickProbability == 2)
+        {
+            
+            OnClickNo(kickProbability);
+        }
+        else
+        {
+            
+        }
+    }
+    public void OnClickNo(int yesProbability)
+    {
+        MainCamera.SetActive(true);
+        SecondCamera.SetActive(false);
+        yesProbability = Random.Range(1, 8);
+        if (yesProbability == 4)
+        {
+            
+            OnClickYes(yesProbability);
+        }
+        else
+        {
+            
+        }
+    }
+    
+    
    
 }
