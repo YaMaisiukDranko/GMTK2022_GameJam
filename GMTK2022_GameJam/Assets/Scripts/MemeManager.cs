@@ -17,7 +17,7 @@ public class MemeManager : MonoBehaviour
     private Stone _stone;
     public int spriteInt;
     public bool isMoving;
-    public bool diceDropped;
+    public static bool diceDropped;
     
     public GameObject MainCamera;
     public GameObject SecondCamera;

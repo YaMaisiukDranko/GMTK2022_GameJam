@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void FirstDiceDrop()
     {
-        if (Input.GetKeyDown(KeyCode.R) && DiceScript.diceDropped == false) //Check for R Button Click
+        if (Input.GetKeyDown(KeyCode.R) && MemeManager.diceDropped == false) //Check for R Button Click
         {
             Instantiate(Dice, new Vector3(-2.7f, 27.4f, 4.7f), Quaternion.identity);
             DS.DropDice();

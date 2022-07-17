@@ -2243,7 +2243,6 @@ MonoBehaviour:
   currentStep: 0
   spriteInt: 0
   isMoving: 0
-  diceDropped: 0
   MainCamera: {fileID: 1666387950}
   SecondCamera: {fileID: 63593183}
   YesButt: {fileID: 721933739}
@@ -2721,6 +2720,7 @@ MonoBehaviour:
   SpaceButton: {fileID: 333514503}
   RButton: {fileID: 1578555786}
   GOUI: {fileID: 197816883}
+  Dice: {fileID: 1761241168053807241, guid: 5191de863bd2745ecb87b2ae2b06de1d, type: 3}
 --- !u!4 &798215796
 Transform:
   m_ObjectHideFlags: 0
