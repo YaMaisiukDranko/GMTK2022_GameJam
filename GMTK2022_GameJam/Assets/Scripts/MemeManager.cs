@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 public class MemeManager : MonoBehaviour
 {
@@ -14,25 +15,32 @@ public class MemeManager : MonoBehaviour
     private Stone _stone;
     public int spriteInt;
     public bool isMoving;
+    public bool diceDropped;
     public GameObject MainCamera;
     public GameObject SecondCamera;
 
 
     IEnumerator Delay()
     {
-        if (isMoving == true)
+        if (currentStep >= 1)
         {
-            yield return new WaitForSeconds(0.5f);
-            SecondCamera.SetActive(false);
-            MainCamera.SetActive(true);
+            if (isMoving == true)
+            {
+                yield return new WaitForSeconds(0.5f);
+                SecondCamera.SetActive(false);
+                MainCamera.SetActive(true);
+            }
+            else if(isMoving == false)
+            {
+                yield return new WaitForSeconds(1f);
+                SecondCamera.SetActive(true);
+                MainCamera.SetActive(false);
+            }
         }
-        else if(isMoving == false)
+        else
         {
-            yield return new WaitForSeconds(0.5f);
-            SecondCamera.SetActive(true);
-            MainCamera.SetActive(false);
+            
         }
-        
     }
 
     private void Start()
@@ -64,5 +72,11 @@ public class MemeManager : MonoBehaviour
         StartCoroutine(Delay());
     }
 
+    
+    //QUESTIONS
+    void Questions(int kickProbability)
+    {
+        kickProbability = Random.Range(1, 4);
+    }
    
 }

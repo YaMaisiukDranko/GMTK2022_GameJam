@@ -17,6 +17,7 @@ public class Stone : MonoBehaviour
     public static bool isMoving;
     private bool finalMove;
     
+
     private void Start()
     {
         //this.OnPlayerStandOnFinalRoute += Stone_OnPlayerStandOnFinalRoute;
@@ -36,7 +37,7 @@ public class Stone : MonoBehaviour
         {
             GameOverUI.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
+        if (Input.GetKeyDown(KeyCode.Space) && !isMoving && DiceScript.diceDropped == true)
         {
             //Debug.Log("FigureMoving");
             if(!isMoving)
@@ -57,7 +58,11 @@ public class Stone : MonoBehaviour
                     }
                 }
             }
-        }    
+        }
+        else if (DiceScript.diceDropped == false)
+        {
+            
+        }
     }
 
     public IEnumerator Move()

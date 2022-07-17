@@ -307,7 +307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &63593184
 Camera:
   m_ObjectHideFlags: 0
@@ -862,7 +862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &197816884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2190,6 +2190,7 @@ MonoBehaviour:
   currentStep: 0
   spriteInt: 0
   isMoving: 0
+  diceDropped: 0
   MainCamera: {fileID: 1666387950}
   SecondCamera: {fileID: 63593183}
 --- !u!4 &718125543 stripped

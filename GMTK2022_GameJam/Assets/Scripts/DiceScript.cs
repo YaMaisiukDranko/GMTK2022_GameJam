@@ -9,6 +9,7 @@ public class DiceScript : MonoBehaviour
     private static Rigidbody rb;
     public static Vector3 diceVelocity;
     public int diceNum;
+    public static bool diceDropped = true;
     
 
     private void Start()
@@ -21,9 +22,15 @@ public class DiceScript : MonoBehaviour
     {
         diceVelocity = rb.velocity;
         
-        if(Input.GetKeyDown(KeyCode.R)) //Check for R Button Click
+        if(Input.GetKeyDown(KeyCode.R) && diceDropped == false) //Check for R Button Click
         {
             DropDice();
+            diceDropped = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            diceDropped = false;
         }
         
     }
