@@ -20,7 +20,7 @@ public class MemeManager : MonoBehaviour
     {
         currentSprite = sr.sprite;
         currentStep = _stone.routePosition;
-        memeScreen = GameObject.Find("MemeSCREEN");
+        memeScreen = GameObject.FindWithTag("MemeScreen");
         sr = memeScreen.GetComponent<SpriteRenderer>();
     }
 
