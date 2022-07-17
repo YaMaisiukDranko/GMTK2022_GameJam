@@ -2189,6 +2189,9 @@ MonoBehaviour:
   sr: {fileID: 930239321}
   currentStep: 0
   spriteInt: 0
+  isMoving: 0
+  MainCamera: {fileID: 1666387950}
+  SecondCamera: {fileID: 63593183}
 --- !u!4 &718125543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081311612478865750, guid: 028bc6b2496254b338425ec1366d6368, type: 3}

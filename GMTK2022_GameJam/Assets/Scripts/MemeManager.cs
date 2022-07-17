@@ -13,26 +13,56 @@ public class MemeManager : MonoBehaviour
     public int currentStep;
     private Stone _stone;
     public int spriteInt;
+    public bool isMoving;
+    public GameObject MainCamera;
+    public GameObject SecondCamera;
 
-    
+
+    IEnumerator Delay()
+    {
+        if (isMoving == true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            SecondCamera.SetActive(false);
+            MainCamera.SetActive(true);
+        }
+        else if(isMoving == false)
+        {
+            yield return new WaitForSeconds(0.5f);
+            SecondCamera.SetActive(true);
+            MainCamera.SetActive(false);
+        }
+        
+    }
 
     private void Start()
     {
         currentSprite = sr.sprite;
         currentStep = spriteInt;
+        isMoving = Stone.isMoving;
         memeScreen = GameObject.FindWithTag("MemeScreen");
         sr = memeScreen.GetComponent<SpriteRenderer>();
+        
     }
 
     private void Update()
     {
         currentStep = Stone.routePosition;
         spriteInt = Stone.routePosition;
+        isMoving = Stone.isMoving;
         SetMemeToScreen();
+        CameraChanger();
     }
 
     void SetMemeToScreen()
     {
         sr.sprite = memeSprites[spriteInt];
     }
+
+    public void CameraChanger()
+    {
+        StartCoroutine(Delay());
+    }
+
+   
 }

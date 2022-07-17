@@ -14,7 +14,7 @@ public class Stone : MonoBehaviour
     public int steps;
     int stepToFinish;
 
-    private bool isMoving;
+    public static bool isMoving;
     private bool finalMove;
     
     private void Start()
