@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public enum MoveState { PlayerMove, Enemy1Move, Enemy2Move, NobodyMove }
     CharacterState cState;
     private MoveState mState;
+    public GameObject MemePanel;
     private void Start()
     {
         RButton.SetActive(true);
@@ -23,40 +24,49 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //CHARACTER STATE CHECK
-        if (cState == CharacterState.Player)
+        int currentStep = MemeManager.currentStep;
+        bool isMoving = MemeManager.isMoving;
+        if (currentStep >= 1)
+        {
+            if (isMoving == true && DiceNumberText.diceNumber > 1)
+            {
+                
+                //SecondCamera.SetActive(false);
+                MemePanel.SetActive(false);
+                
+            }
+            else if(isMoving == false && DiceNumberText.diceNumber > 1)
+            {
+                
+                //SecondCamera.SetActive(true);
+                MemePanel.SetActive(true);
+                
+            }
+            else if(DiceNumberText.diceNumber == 1)
+            {
+                //SecondCamera.SetActive(false);
+                MemePanel.SetActive(false);
+            }
+        }
+        else
         {
             
-        }
-        else if (cState == CharacterState.Enemy1)
-        {
-            
-        }
-        else if(cState == CharacterState.Enemy2)
-        {
-            
-        }
-
-        //MOVEMENT STATE CHECK
-        if (mState == MoveState.PlayerMove)
-        {
-            //SpaceButton.S
-        }
-        else if(mState == MoveState.Enemy1Move)
-        {
-             
-        }
-        else if(mState == MoveState.Enemy2Move)
-        {
-             
-        }
-        else if(mState == MoveState.NobodyMove)
-        {
-             
         }
         
     }
 
+    public void OnClickYes()
+    {
+        Debug.Log("CLOSE");
+        MemePanel.gameObject.SetActive(false);
+    }
+    public void OnClickNo()
+    {
+        Debug.Log("CLOSE");
+        MemePanel.SetActive(false);
+    }
+    
+    
     void PlayingOrder()
     {
         
