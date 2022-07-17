@@ -13,7 +13,7 @@ public class GameOverUI : MonoBehaviour
 
         transform.Find("restartBtn").GetComponent<Button>().onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         });
 
         transform.Find("menuBtn").GetComponent<Button>().onClick.AddListener(() =>
