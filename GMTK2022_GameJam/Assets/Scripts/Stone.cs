@@ -16,6 +16,8 @@ public class Stone : MonoBehaviour
 
     public static bool isMoving;
     private bool finalMove;
+
+    public AudioSource moveSound;
     
 
     private void Start()
@@ -91,6 +93,7 @@ public class Stone : MonoBehaviour
             
             steps--;
             routePosition++;     
+            moveSound.Play(0);
         }
 
         isMoving = false;
@@ -98,6 +101,7 @@ public class Stone : MonoBehaviour
 
     private bool MoveToNextNote(Vector3 goal)
     {
+        
         return goal != (transform.position = Vector3.MoveTowards(transform.position, goal, 8f * Time.deltaTime));
     }
 }
