@@ -140,6 +140,13 @@ public class MemeManager : MonoBehaviour
             YesButtTMP.text = "Ah, humor based on my pain";
             NoButtTMP.text = "No";
         }
+        else
+        {
+            QuestionTMP.text = "Do yo like this meme";
+            YesButtTMP.fontSize = 35;
+            YesButtTMP.text = "Yes";
+            NoButtTMP.text = "No";
+        }
     }
     
     
