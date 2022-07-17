@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject SpaceButton;
     [SerializeField] private GameObject RButton;
-    GameOverUI GOUI;
+    [SerializeField] private GameObject GOUI;
     public enum CharacterState { Player, Enemy1, Enemy2 } 
     public enum MoveState { PlayerMove, Enemy1Move, Enemy2Move, NobodyMove }
     CharacterState cState;
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GOUI.Show();
+            GOUI.SetActive(true);
         }
     }
 }
