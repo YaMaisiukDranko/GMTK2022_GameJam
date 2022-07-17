@@ -2114,8 +2114,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 669462701}
+  - component: {fileID: 669462702}
   m_Layer: 0
-  m_Name: Screen
+  m_Name: MemeScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2133,18 +2134,71 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 930239320}
+  - {fileID: 930239322}
   - {fileID: 154048814}
   - {fileID: 470920604}
   - {fileID: 1792575484}
   m_Father: {fileID: 1920667295}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!4 &718125543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081311612478865750, guid: 028bc6b2496254b338425ec1366d6368, type: 3}
   m_PrefabInstance: {fileID: 1800661409}
   m_PrefabAsset: {fileID: 0}
+=======
+--- !u!114 &669462702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669462700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285d036e9abeb4455b8756870967bb8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memeSprites:
+  - {fileID: 21300000, guid: 4b91557999e3d45d7b24366ce82edff6, type: 3}
+  - {fileID: 21300000, guid: 5c2b86fde87ba461da10ee13ddd4144a, type: 3}
+  - {fileID: 21300000, guid: a061eb9f4b02145588b34c6d1fdebe38, type: 3}
+  - {fileID: 21300000, guid: 5325edcc069e749a387187ca19a86cf8, type: 3}
+  - {fileID: 21300000, guid: c2de9c4c9154b46ceb7bae99ee0303b7, type: 3}
+  - {fileID: 21300000, guid: 60807dca205a1407ca6704215f731620, type: 3}
+  - {fileID: 21300000, guid: 71bc63972d2c4471db40ac82945d9278, type: 3}
+  - {fileID: 21300000, guid: 26405b7ed404642008af653b186068c4, type: 3}
+  - {fileID: 21300000, guid: d1c045c20ff2042cfb519637d88fb499, type: 3}
+  - {fileID: 21300000, guid: 940aa824d50624aababc3f4bb38010b2, type: 3}
+  - {fileID: 21300000, guid: f1dbd9d44d0c94f9dadb80f5053d09b4, type: 3}
+  - {fileID: 21300000, guid: 3f6515ad182da4523a5a2b0afa93151d, type: 3}
+  - {fileID: 21300000, guid: 6f394f562cb454f819649a907097d526, type: 3}
+  - {fileID: 21300000, guid: cb548cddd003d4ba18c08bd390b59e30, type: 3}
+  - {fileID: 21300000, guid: 3c69ee13614654b74b425a39b3fdd283, type: 3}
+  - {fileID: 21300000, guid: daf2ce0b688a0498a9cda22e8b220aa7, type: 3}
+  - {fileID: 21300000, guid: 28aab1135bf2d4d90acc3c9010d8129b, type: 3}
+  - {fileID: 21300000, guid: 461e2b64533274c348c82f12419913c5, type: 3}
+  - {fileID: 21300000, guid: ac31e07b6a6254142ae2cfb081d1211c, type: 3}
+  - {fileID: 21300000, guid: d60e5f239bc5840aba8ffe3435abfdbe, type: 3}
+  - {fileID: 21300000, guid: 9a04747d128f44867b12506958e7cdf6, type: 3}
+  - {fileID: 21300000, guid: 53abe096e9ee1470fb83fcc1f915f4be, type: 3}
+  - {fileID: 21300000, guid: c9030861c263d4061b17aed9f25191d8, type: 3}
+  - {fileID: 21300000, guid: 5d02290ec951ed140a12a43d368ced8e, type: 3}
+  - {fileID: 21300000, guid: b7263092daf0f4f0bb42842cf4361876, type: 3}
+  - {fileID: 21300000, guid: 0bc69bfcb5a0240e48692d73ac7883fa, type: 3}
+  - {fileID: 21300000, guid: 68d6bdaf25e78440ea8c77b6a5922ed6, type: 3}
+  - {fileID: 21300000, guid: bd78e11ea480c40fbbef2c7e2cb1aaab, type: 3}
+  - {fileID: 21300000, guid: a1fbde5a536fb47d1badc4d72898963e, type: 3}
+  - {fileID: 21300000, guid: 3c5d28799cd6c4d9e915fd06be108988, type: 3}
+  - {fileID: 21300000, guid: 87d6efd6111234b92ab431a345d68179, type: 3}
+  - {fileID: 21300000, guid: 4aaf0acbe49f349f1853933178dc4f0b, type: 3}
+  currentSprite: {fileID: 0}
+  memeScreen: {fileID: 930239319}
+  sr: {fileID: 930239321}
+  currentStep: 0
+  spriteInt: 0
+>>>>>>> Stashed changes
 --- !u!1 &721933737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,15 +2742,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 930239320}
+  - component: {fileID: 930239322}
   - component: {fileID: 930239321}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: MemeSCREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!4 &930239320
 Transform:
   m_ObjectHideFlags: 0
@@ -2712,6 +2767,8 @@ Transform:
   m_Father: {fileID: 669462701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!212 &930239321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2753,7 +2810,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7263092daf0f4f0bb42842cf4361876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2764,10 +2821,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< Updated upstream
 --- !u!4 &936617825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081311612478865750, guid: 028bc6b2496254b338425ec1366d6368, type: 3}
   m_PrefabInstance: {fileID: 585413724}
+=======
+--- !u!224 &930239322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930239319}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.32302976}
+  m_LocalScale: {x: 0.039389998, y: 0.026259998, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 669462701}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.71589005}
+  m_SizeDelta: {x: 8.06, y: 9.87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &954841669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+>>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &951668889
 PrefabInstance:
