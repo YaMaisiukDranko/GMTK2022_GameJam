@@ -35,7 +35,7 @@ public class DiceScript : MonoBehaviour
         
     }
 
-    void DropDice()
+    public void DropDice()
     {
         diceNum = 0;
         //Random rotation of Dice

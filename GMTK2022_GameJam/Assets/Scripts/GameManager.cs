@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public enum MoveState { PlayerMove, Enemy1Move, Enemy2Move, NobodyMove }
     CharacterState cState;
     private MoveState mState;
+    private DiceScript DS;
+    public GameObject Dice;
     private void Start()
     {
         RButton.SetActive(true);
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        FirstDiceDrop();
         //CHARACTER STATE CHECK
         if (cState == CharacterState.Player)
         {
@@ -57,6 +60,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void FirstDiceDrop()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && DiceScript.diceDropped == false) //Check for R Button Click
+        {
+            Instantiate(Dice, new Vector3(-2.7f, 27.4f, 4.7f), Quaternion.identity);
+            DS.DropDice();
+        }
+    }
+    
+    
     void PlayingOrder()
     {
         

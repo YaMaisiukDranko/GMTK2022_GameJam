@@ -93,6 +93,7 @@ public class MemeManager : MonoBehaviour
 
     
     //QUESTIONS
+    
     void Questions()
     {
         
@@ -115,6 +116,7 @@ public class MemeManager : MonoBehaviour
             
         }
     }
+    
     public void OnClickNo(int yesProbability)
     {
         MainCamera.SetActive(true);
