@@ -2161,7 +2161,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c2de9c4c9154b46ceb7bae99ee0303b7, type: 3}
   - {fileID: 21300000, guid: 60807dca205a1407ca6704215f731620, type: 3}
   - {fileID: 21300000, guid: 71bc63972d2c4471db40ac82945d9278, type: 3}
-  - {fileID: 21300000, guid: 26405b7ed404642008af653b186068c4, type: 3}
   - {fileID: 21300000, guid: d1c045c20ff2042cfb519637d88fb499, type: 3}
   - {fileID: 21300000, guid: 940aa824d50624aababc3f4bb38010b2, type: 3}
   - {fileID: 21300000, guid: f1dbd9d44d0c94f9dadb80f5053d09b4, type: 3}
@@ -2788,7 +2787,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3c69ee13614654b74b425a39b3fdd283, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c2b86fde87ba461da10ee13ddd4144a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6041,7 +6040,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverUI: {fileID: 197816883}
   currentRoute: {fileID: 481104162}
-  routePosition: 0
   steps: 0
 --- !u!4 &1920667295 stripped
 Transform:

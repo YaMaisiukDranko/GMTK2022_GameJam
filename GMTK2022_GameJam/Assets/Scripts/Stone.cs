@@ -9,7 +9,7 @@ public class Stone : MonoBehaviour
     public GameObject GameOverUI;
     public Route currentRoute;
 
-    public int routePosition;
+    public static int routePosition;
 
     public int steps;
     int stepToFinish;

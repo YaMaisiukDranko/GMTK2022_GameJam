@@ -19,19 +19,20 @@ public class MemeManager : MonoBehaviour
     private void Start()
     {
         currentSprite = sr.sprite;
-        currentStep = _stone.routePosition;
+        currentStep = spriteInt;
         memeScreen = GameObject.FindWithTag("MemeScreen");
         sr = memeScreen.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        currentStep = _stone.routePosition;
+        currentStep = Stone.routePosition;
+        spriteInt = Stone.routePosition;
         SetMemeToScreen();
     }
 
     void SetMemeToScreen()
     {
-        sr.sprite = memeSprites[1];
+        sr.sprite = memeSprites[spriteInt];
     }
 }
