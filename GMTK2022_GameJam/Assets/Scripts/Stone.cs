@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Stone : MonoBehaviour
 {
-    public event EventHandler OnPlayerStandOnFinalRoute;
+    //public event EventHandler OnPlayerStandOnFinalRoute;
+    public GameObject GameOverUI;
     public Route currentRoute;
 
     public int routePosition;
@@ -15,12 +16,13 @@ public class Stone : MonoBehaviour
     private bool isMoving;
     private void Start()
     {
-        this.OnPlayerStandOnFinalRoute += Stone_OnPlayerStandOnFinalRoute;
+        //this.OnPlayerStandOnFinalRoute += Stone_OnPlayerStandOnFinalRoute;
     }
 
     private void Stone_OnPlayerStandOnFinalRoute(object sender, EventArgs e)
     {
-        GameOverUI.Instance.Show();
+        //GameOverUI.Instance.Show();
+        GameOverUI.SetActive(true);
         Debug.Log("Game Over!");
     }
 
@@ -52,10 +54,10 @@ public class Stone : MonoBehaviour
         while(steps > 0)
         {
             Vector3 nextPos = currentRoute.childNodeList[routePosition + 1].position;
-            int gameOverValue = 40 +- 1; //Game Over Platform
+            int gameOverValue = 39; //Game Over Platform
             if (nextPos == currentRoute.childNodeList[gameOverValue].position)
             {
-                OnPlayerStandOnFinalRoute?.Invoke(this, EventArgs.Empty);
+                //OnPlayerStandOnFinalRoute?.Invoke(this, EventArgs.Empty);
             }
 
             while(MoveToNextNote(nextPos))

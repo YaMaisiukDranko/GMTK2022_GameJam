@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject SpaceButton;
     [SerializeField] private GameObject RButton;
+    GameOverUI GOUI;
     public enum CharacterState { Player, Enemy1, Enemy2 } 
     public enum MoveState { PlayerMove, Enemy1Move, Enemy2Move, NobodyMove }
     CharacterState cState;
@@ -64,6 +65,12 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GOUI.Show();
+        }
+    }
 }

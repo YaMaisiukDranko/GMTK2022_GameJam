@@ -2214,6 +2214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798215796}
   - component: {fileID: 798215795}
+  - component: {fileID: 798215797}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2243,13 +2244,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798215794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0000009536743, z: 0.00000047683716}
+  m_LocalPosition: {x: 30.5, y: 1.08, z: 15.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &798215797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798215794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3388176, y: 2.195325, z: 1.7469759}
+  m_Center: {x: 0.1694088, y: 0.59766257, z: 0.37348795}
 --- !u!4 &818628489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081311612478865750, guid: 028bc6b2496254b338425ec1366d6368, type: 3}
@@ -5762,6 +5776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8c09ca12911444aa6b2c94d9928032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverUI: {fileID: 0}
   currentRoute: {fileID: 481104162}
   routePosition: 0
   steps: 0
