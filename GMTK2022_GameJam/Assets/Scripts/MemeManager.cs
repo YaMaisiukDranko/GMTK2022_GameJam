@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
@@ -16,8 +18,16 @@ public class MemeManager : MonoBehaviour
     public int spriteInt;
     public bool isMoving;
     public bool diceDropped;
+    
     public GameObject MainCamera;
     public GameObject SecondCamera;
+    
+    public Button YesButt;
+    public Button NoButt;
+    public TMP_Text YesButtTMP;
+    public TMP_Text NoButtTMP;
+    public TMP_Text QuestionTMP;
+    
 
 
     IEnumerator Delay()
@@ -56,7 +66,9 @@ public class MemeManager : MonoBehaviour
         isMoving = Stone.isMoving;
         memeScreen = GameObject.FindWithTag("MemeScreen");
         sr = memeScreen.GetComponent<SpriteRenderer>();
-        
+
+        NoButtTMP = NoButt.GetComponentInChildren<TMP_Text>();
+        YesButtTMP = YesButt.GetComponentInChildren<TMP_Text>();
     }
 
     private void Update()
@@ -66,6 +78,7 @@ public class MemeManager : MonoBehaviour
         isMoving = Stone.isMoving;
         SetMemeToScreen();
         CameraChanger();
+        SpecialMemes();
     }
 
     void SetMemeToScreen()
@@ -115,6 +128,17 @@ public class MemeManager : MonoBehaviour
         else
         {
             
+        }
+    }
+
+    void SpecialMemes()
+    {
+        if (currentStep == 4)
+        {
+            QuestionTMP.text = "Put extra phrase";
+            YesButtTMP.fontSize = 15;
+            YesButtTMP.text = "Ah, humor based on my pain";
+            NoButtTMP.text = "No";
         }
     }
     

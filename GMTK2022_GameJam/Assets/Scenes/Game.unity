@@ -2256,7 +2256,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5c2b86fde87ba461da10ee13ddd4144a, type: 3}
   - {fileID: 21300000, guid: a061eb9f4b02145588b34c6d1fdebe38, type: 3}
   - {fileID: 21300000, guid: 5325edcc069e749a387187ca19a86cf8, type: 3}
-  - {fileID: 21300000, guid: c2de9c4c9154b46ceb7bae99ee0303b7, type: 3}
+  - {fileID: 21300000, guid: bc61d129b580ad04eb77770c2cc77939, type: 3}
   - {fileID: 21300000, guid: 60807dca205a1407ca6704215f731620, type: 3}
   - {fileID: 21300000, guid: 71bc63972d2c4471db40ac82945d9278, type: 3}
   - {fileID: 21300000, guid: d1c045c20ff2042cfb519637d88fb499, type: 3}
@@ -2291,6 +2291,11 @@ MonoBehaviour:
   diceDropped: 0
   MainCamera: {fileID: 1666387950}
   SecondCamera: {fileID: 63593183}
+  YesButt: {fileID: 721933739}
+  NoButt: {fileID: 1629559622}
+  YesButtTMP: {fileID: 0}
+  NoButtTMP: {fileID: 0}
+  QuestionTMP: {fileID: 470920605}
 --- !u!4 &718125543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081311612478865750, guid: 028bc6b2496254b338425ec1366d6368, type: 3}
@@ -3986,8 +3991,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6718,8 +6723,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
