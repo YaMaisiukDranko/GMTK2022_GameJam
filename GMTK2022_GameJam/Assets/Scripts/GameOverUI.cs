@@ -25,11 +25,7 @@ public class GameOverUI : MonoBehaviour
     {
         Hide();
     }
-
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
+    
 
     public void Hide()
     {

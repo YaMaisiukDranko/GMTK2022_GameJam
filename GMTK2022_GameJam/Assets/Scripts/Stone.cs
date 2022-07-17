@@ -32,7 +32,10 @@ public class Stone : MonoBehaviour
 
     private void Update()
     {
-
+        if (routePosition > 39)
+        {
+            GameOverUI.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
             //Debug.Log("FigureMoving");
