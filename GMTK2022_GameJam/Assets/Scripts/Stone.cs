@@ -52,7 +52,7 @@ public class Stone : MonoBehaviour
         while(steps > 0)
         {
             Vector3 nextPos = currentRoute.childNodeList[routePosition + 1].position;
-            int gameOverValue = currentRoute.childNodeList.Count - 1; //Game Over Platform
+            int gameOverValue = 70 +- 1; //Game Over Platform
             if (nextPos == currentRoute.childNodeList[gameOverValue].position)
             {
                 OnPlayerStandOnFinalRoute?.Invoke(this, EventArgs.Empty);
