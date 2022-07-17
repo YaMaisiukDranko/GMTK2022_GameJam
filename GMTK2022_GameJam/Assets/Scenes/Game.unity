@@ -307,7 +307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &63593184
 Camera:
   m_ObjectHideFlags: 0
@@ -2328,18 +2328,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721933737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -405.53}
-  m_LocalScale: {x: 0.017268354, y: 0.017268354, z: 0.017268354}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.287629, y: 2.287629, z: 2.287629}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2111587087}
   m_Father: {fileID: 1792575484}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7615, y: -1.35}
+  m_AnchoredPosition: {x: -233.42007, y: -175}
   m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721933739
@@ -2389,7 +2389,7 @@ MonoBehaviour:
       - m_Target: {fileID: 669462702}
         m_TargetAssemblyTypeName: MemeManager, Assembly-CSharp
         m_MethodName: OnClickYes
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5251,17 +5251,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629559620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -405.53}
-  m_LocalScale: {x: 0.017268354, y: 0.017268354, z: 0.017268354}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.2876291, y: 2.2876291, z: 2.2876291}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1301381612}
   m_Father: {fileID: 1792575484}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.7616, y: -1.3500011}
+  m_AnchoredPosition: {x: 233.42, y: -174.99995}
   m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629559622
@@ -5311,7 +5311,7 @@ MonoBehaviour:
       - m_Target: {fileID: 669462702}
         m_TargetAssemblyTypeName: MemeManager, Assembly-CSharp
         m_MethodName: OnClickNo
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5662,7 +5662,6 @@ GameObject:
   - component: {fileID: 1666387953}
   - component: {fileID: 1666387952}
   - component: {fileID: 1666387951}
-  - component: {fileID: 1666387954}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5736,31 +5735,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 80, y: 0, z: 0}
---- !u!114 &1666387954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666387950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d37e5385efd7064cb1d54c94960acae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Resolution: 20
-  m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
-    inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    width: 0.2
-  m_Looped: 0
-  m_Waypoints:
-  - position: {x: 0, y: -0.14247441, z: -0.07543945}
-    tangent: {x: 0.82987833, y: 0.76966643, z: 0.13571548}
-    roll: 0
-  - position: {x: -101.01742, y: -21.397964, z: -71.766205}
-    tangent: {x: 1, y: 0, z: 0}
-    roll: 0
 --- !u!4 &1688624363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8081311612478865750, guid: 028bc6b2496254b338425ec1366d6368, type: 3}
@@ -6002,8 +5976,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 721933738}
   - {fileID: 1629559621}
+  - {fileID: 721933738}
   m_Father: {fileID: 669462701}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6044,7 +6018,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 0, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -6063,7 +6037,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 63593184}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0

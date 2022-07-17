@@ -99,36 +99,15 @@ public class MemeManager : MonoBehaviour
        
     }
 
-    public void OnClickYes(int kickProbability)
+    public void OnClickYes()
     {
         MainCamera.SetActive(true);
         SecondCamera.SetActive(false);
-        
-        kickProbability = Random.Range(1, 6);
-        if (kickProbability == 2)
-        {
-            
-            OnClickNo(kickProbability);
-        }
-        else
-        {
-            
-        }
     }
-    public void OnClickNo(int yesProbability)
+    public void OnClickNo()
     {
         MainCamera.SetActive(true);
         SecondCamera.SetActive(false);
-        yesProbability = Random.Range(1, 8);
-        if (yesProbability == 4)
-        {
-            
-            OnClickYes(yesProbability);
-        }
-        else
-        {
-            
-        }
     }
 
     void SpecialMemes()
